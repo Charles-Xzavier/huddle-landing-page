@@ -62,7 +62,7 @@ body{
 
 .article{
     display: flex;
-    gap: 5%;
+    gap: 10%;
     padding: 0 4rem 3rem;
 }
 
@@ -301,9 +301,24 @@ body{
     color: #eb599e;
 }
 
+@media screen and (max-width: 1024px) {
+    .article .text{
+        width: 50%;
+    }
+    
+    .article .image-1{
+        width: 50%;
+    }
+
+    .article .text h1{
+        font-size: 2rem;
+        padding-block-end: 1.8rem;
+    }
+}
+
 @media screen and (max-width: 992px){
     .article .text h1{
-        font-size: 2.3rem;
+        font-size: 2rem;
     }
     
     .article .text p{
@@ -317,9 +332,10 @@ body{
     }
 
     .article .image-1 img{
-        width: 95%;
-        height: 95%;
+        width: 100%;
+        height: 100%;
         margin-left: auto;
+        object-fit: contain;
     }
     
     :is(.section-2 .text-2, .section-3 .text-3, .section-4 .text-4) > p{
